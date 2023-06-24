@@ -145,14 +145,14 @@ interface MessageInterface {
      * @param string $name Case-insensitive header field name to remove.
      * @return static
      */
-    public function withoutHeader($name);
+    //public function withoutHeader($name);
 
     /**
      * Gets the body of the message.
      *
      * @return StreamInterface Returns the body as a stream.
      */
-    public function getBody();
+   // public function getBody();
 
     /**
      * Return an instance with the specified message body.
@@ -167,5 +167,5 @@ interface MessageInterface {
      * @return static
      * @throws \InvalidArgumentException When the body is not valid.
      */
-    public function withBody(StreamInterface $body);
+   // public function withBody(StreamInterface $body);
 }
