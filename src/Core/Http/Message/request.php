@@ -5,7 +5,19 @@ use InvalidArgumentException;
 
 class Request extends Message implements RequestInterface
 {
-    protected $method;
+    protected enum Methods {
+        case 'GET';
+        case 'POST';
+        case 'HEAD';
+        case 'PUT';
+        case 'DELETE';
+        case 'CONNECT';
+        case 'OPTIONS';
+        case 'TRACE';
+        case 'PATCH';
+    }
+
+    protected Methods $method;
     protected $requestTarget;
     protected $uri;
 
